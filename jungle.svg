@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240" shape-rendering="crispEdges">
+  <style>
+    /* swaying vines */
+    .vinesA { animation: sway 3s steps(1) infinite; }
+    .vinesB { animation: sway 4s steps(1) infinite; animation-delay: -1.5s; }
+    @keyframes sway { 0% { transform: translateX(0); } 50% { transform: translateX(2px); } }
+
+    /* fireflies */
+    .ff { animation: blink 3s steps(1) infinite; }
+    .ff2 { animation-delay: -0.8s; }
+    .ff3 { animation-delay: -1.6s; }
+    .ff4 { animation-delay: -2.3s; }
+    @keyframes blink { 0% { opacity: 0; } 40% { opacity: 1; } 70% { opacity: 0; } }
+  </style>
+
+  <defs>
+    <!-- near trunk with flared roots and a stepped branch -->
+    <g id="trunk">
+      <rect x="0" y="0" width="18" height="205"/>
+      <rect x="-5" y="180" width="28" height="25"/>
+      <rect x="-11" y="195" width="40" height="10"/>
+      <rect x="18" y="62" width="12" height="8"/>
+      <rect x="30" y="54" width="12" height="8"/>
+      <rect x="42" y="46" width="12" height="8"/>
+    </g>
+    <!-- umbrella tree, centered on x = 0 -->
+    <g id="umb">
+      <rect x="-24" y="52" width="48" height="8"/>
+      <rect x="-36" y="60" width="72" height="8"/>
+      <rect x="-46" y="68" width="92" height="6"/>
+      <rect x="-4"  y="74" width="8"  height="131"/>
+    </g>
+  </defs>
+
+  <!-- HAZY BACK SKY -->
+  <rect x="0" y="0"   width="800" height="70"  fill="#a9c27a"/>
+  <rect x="0" y="70"  width="800" height="70"  fill="#98b96c"/>
+  <rect x="0" y="140" width="800" height="70"  fill="#86ac60"/>
+
+  <!-- FAR TREES (faded) -->
+  <g fill="#8db468">
+    <use href="#umb" transform="translate(30,31) scale(0.85)"/>
+    <use href="#umb" transform="translate(150,31) scale(0.85)"/>
+    <use href="#umb" transform="translate(270,31) scale(0.85)"/>
+    <use href="#umb" transform="translate(395,31) scale(0.85)"/>
+    <use href="#umb" transform="translate(520,31) scale(0.85)"/>
+    <use href="#umb" transform="translate(640,31) scale(0.85)"/>
+    <use href="#umb" transform="translate(760,31) scale(0.85)"/>
+  </g>
+  <!-- haze -->
+  <rect x="0" y="120" width="800" height="85" fill="#c8e0a0" opacity="0.18"/>
+
+  <!-- MID TREES -->
+  <g fill="#5a8847">
+    <use href="#umb" transform="translate(70,0)"/>
+    <use href="#umb" transform="translate(215,0)"/>
+    <use href="#umb" transform="translate(350,0)"/>
+    <use href="#umb" transform="translate(500,0)"/>
+    <use href="#umb" transform="translate(690,0)"/>
+  </g>
+  <rect x="0" y="150" width="800" height="55" fill="#c8e0a0" opacity="0.12"/>
+
+  <!-- NEAR TRUNKS -->
+  <g fill="#24432a">
+    <use href="#trunk" transform="translate(125,0)"/>
+    <use href="#trunk" transform="translate(295,0)"/>
+    <use href="#trunk" transform="translate(470,0)"/>
+    <use href="#trunk" transform="translate(655,0) scale(-1,1)"/>
+  </g>
+
+  <!-- CANOPY (two layers) -->
+  <path fill="#2c5230" d="M0 0 H800 V38 H760 V46 H720 V40 H680 V50 H620 V42 H570 V52 H520 V44 H470 V54 H420 V46 H370 V54 H330 V44 H280 V52 H230 V44 H190 V52 H130 V42 H80 V50 H30 V42 H0 Z"/>
+  <path fill="#1b3320" d="M0 0 H800 V22 H770 V30 H730 V24 H690 V34 H640 V26 H600 V36 H550 V28 H500 V38 H455 V30 H410 V40 H360 V30 H320 V38 H270 V28 H225 V36 H180 V26 H140 V34 H95 V26 H50 V32 H0 Z"/>
+
+  <!-- HANGING VINES -->
+  <g class="vinesA" fill="#1f3d25">
+    <rect x="62"  y="32" width="2" height="38"/><rect x="60"  y="68" width="6" height="4"/>
+    <rect x="148" y="34" width="2" height="26"/><rect x="146" y="58" width="6" height="4"/>
+    <rect x="262" y="36" width="2" height="44"/><rect x="260" y="78" width="6" height="4"/>
+    <rect x="388" y="40" width="2" height="30"/><rect x="386" y="68" width="6" height="4"/>
+    <rect x="602" y="38" width="2" height="40"/><rect x="600" y="76" width="6" height="4"/>
+  </g>
+  <g class="vinesB" fill="#1f3d25">
+    <rect x="104" y="34" width="2" height="22"/><rect x="102" y="54" width="6" height="4"/>
+    <rect x="206" y="38" width="2" height="34"/><rect x="204" y="70" width="6" height="4"/>
+    <rect x="340" y="38" width="2" height="24"/><rect x="338" y="60" width="6" height="4"/>
+    <rect x="512" y="42" width="2" height="36"/><rect x="510" y="76" width="6" height="4"/>
+    <rect x="712" y="40" width="2" height="30"/><rect x="710" y="68" width="6" height="4"/>
+    <rect x="768" y="32" width="2" height="22"/><rect x="766" y="52" width="6" height="4"/>
+  </g>
+
+  <!-- FIREFLIES -->
+  <g fill="#ffe98a">
+    <rect class="ff"        x="180" y="110" width="3" height="3"/>
+    <rect class="ff ff2"    x="340" y="140" width="3" height="3"/>
+    <rect class="ff ff3"    x="440" y="100" width="3" height="3"/>
+    <rect class="ff ff4"    x="590" y="130" width="3" height="3"/>
+    <rect class="ff ff2"    x="730" y="115" width="3" height="3"/>
+    <rect class="ff ff3"    x="40"  y="135" width="3" height="3"/>
+  </g>
+
+  <!-- BUSHES AT THE EDGES -->
+  <path fill="#2f5a2f" d="M0 205 V175 H8 V168 H24 V162 H44 V170 H60 V182 H72 V205 Z"/>
+  <path fill="#2f5a2f" d="M800 205 V172 H790 V165 H772 V160 H752 V168 H738 V180 H726 V205 Z"/>
+
+  <!-- ROCKS -->
+  <g>
+    <!-- big mossy cluster -->
+    <rect x="84"  y="188" width="18" height="17" fill="#6e6a74"/>
+    <rect x="100" y="180" width="24" height="25" fill="#7a7681"/>
+    <rect x="122" y="190" width="18" height="15" fill="#6e6a74"/>
+    <rect x="84"  y="188" width="18" height="3"  fill="#4f9a3a"/>
+    <rect x="100" y="180" width="24" height="3"  fill="#4f9a3a"/>
+    <rect x="122" y="190" width="18" height="3"  fill="#4f9a3a"/>
+    <rect x="116" y="180" width="8"  height="25" fill="#5d5963"/>
+    <!-- small rocks -->
+    <rect x="290" y="199" width="14" height="6" fill="#6e6a74"/>
+    <rect x="290" y="199" width="14" height="2" fill="#4f9a3a"/>
+    <rect x="345" y="201" width="10" height="4" fill="#6e6a74"/>
+    <rect x="560" y="198" width="18" height="7" fill="#6e6a74"/>
+    <rect x="560" y="198" width="18" height="2" fill="#4f9a3a"/>
+    <!-- stacked stones -->
+    <rect x="440" y="188" width="12" height="17" fill="#7a7681"/>
+    <rect x="440" y="192" width="12" height="3"  fill="#5d5963"/>
+    <rect x="440" y="199" width="12" height="3"  fill="#5d5963"/>
+  </g>
+
+  <!-- GROUND -->
+  <rect x="0" y="205" width="800" height="3"  fill="#5fbf3f"/>
+  <rect x="0" y="205" width="800" height="1"  fill="#8be36a"/>
+  <rect x="0" y="208" width="800" height="32" fill="#2a2231"/>
+  <g fill="#3a3043">
+    <rect x="30"  y="216" width="8" height="3"/>
+    <rect x="130" y="224" width="8" height="3"/>
+    <rect x="250" y="214" width="8" height="3"/>
+    <rect x="370" y="226" width="8" height="3"/>
+    <rect x="490" y="218" width="8" height="3"/>
+    <rect x="620" y="225" width="8" height="3"/>
+    <rect x="740" y="216" width="8" height="3"/>
+  </g>
+
+  <!-- FERN TUFTS -->
+  <g fill="#5fbf3f">
+    <rect x="30"  y="198" width="2" height="7"/><rect x="26" y="200" width="2" height="5"/><rect x="34" y="200" width="2" height="5"/>
+    <rect x="215" y="198" width="2" height="7"/><rect x="211" y="200" width="2" height="5"/><rect x="219" y="200" width="2" height="5"/>
+    <rect x="395" y="198" width="2" height="7"/><rect x="391" y="200" width="2" height="5"/><rect x="399" y="200" width="2" height="5"/>
+    <rect x="610" y="198" width="2" height="7"/><rect x="606" y="200" width="2" height="5"/><rect x="614" y="200" width="2" height="5"/>
+  </g>
+</svg>

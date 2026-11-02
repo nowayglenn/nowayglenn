@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="56" viewBox="0 0 96 56" shape-rendering="crispEdges">
+  <style>
+    .m1 { animation: f1 0.3s steps(1) infinite; }
+    .m2 { animation: f2 0.3s steps(1) infinite; }
+    @keyframes f1 { 0% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes f2 { 0% { opacity: 0; } 50% { opacity: 1; } }
+    .hop { animation: hop 0.6s steps(1) infinite; }
+    @keyframes hop { 0% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    .mbody { fill: #b8c0c9; }
+    .mdark { fill: #7d8791; }
+    .mbelly { fill: #dde3e8; }
+    .eye { fill: #1b1b1b; }
+    .pink { fill: #f4a6b8; }
+  </style>
+
+  <g transform="translate(4,12) scale(8)">
+    <g class="hop">
+      <!-- tail -->
+      <rect class="pink" x="0" y="3" width="2" height="1"/>
+      <rect class="pink" x="0" y="2" width="1" height="1"/>
+      <!-- body -->
+      <rect class="mbody" x="2" y="1" width="5" height="3"/>
+      <rect class="mbelly" x="3" y="3" width="3" height="1"/>
+      <!-- ear -->
+      <rect class="mdark" x="6" y="0" width="2" height="1"/>
+      <!-- head -->
+      <rect class="mbody" x="7" y="2" width="2" height="2"/>
+      <rect class="eye"   x="8" y="2" width="1" height="1"/>
+      <rect class="pink"  x="9" y="3" width="1" height="1"/>
+      <!-- legs, frame 1 -->
+      <g class="m1">
+        <rect class="mdark" x="3" y="4" width="1" height="1"/>
+        <rect class="mdark" x="7" y="4" width="1" height="1"/>
+      </g>
+      <!-- legs, frame 2 -->
+      <g class="m2">
+        <rect class="mdark" x="4" y="4" width="1" height="1"/>
+        <rect class="mdark" x="6" y="4" width="1" height="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

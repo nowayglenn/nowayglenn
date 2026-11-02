@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="80" viewBox="0 0 800 80" shape-rendering="crispEdges">
+  <style>
+    .cat { animation: walk 12s linear infinite; }
+    @keyframes walk {
+      from { transform: translateX(-90px); }
+      to   { transform: translateX(810px); }
+    }
+    .f1 { animation: f1 0.6s steps(1) infinite; }
+    .f2 { animation: f2 0.6s steps(1) infinite; }
+    @keyframes f1 { 0% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes f2 { 0% { opacity: 0; } 50% { opacity: 1; } }
+    .body { fill: #e8913a; }
+    .dark { fill: #b8651b; }
+    .eye  { fill: #1b1b1b; }
+    .nose { fill: #f4a6b8; }
+    .ground { fill: #8b949e; opacity: 0.35; }
+  </style>
+
+  <rect class="ground" x="0" y="65" width="800" height="3"/>
+
+  <g class="cat">
+    <g transform="translate(0,20) scale(5)">
+      <!-- tail -->
+      <rect class="body" x="0" y="1" width="1" height="3"/>
+      <rect class="body" x="1" y="3" width="1" height="1"/>
+      <!-- body -->
+      <rect class="body" x="2" y="3" width="9" height="4"/>
+      <rect class="dark" x="4" y="3" width="1" height="2"/>
+      <rect class="dark" x="7" y="3" width="1" height="2"/>
+      <!-- head -->
+      <rect class="body" x="10" y="1" width="5" height="5"/>
+      <rect class="body" x="10" y="0" width="1" height="1"/>
+      <rect class="body" x="13" y="0" width="1" height="1"/>
+      <rect class="eye"  x="13" y="2" width="1" height="1"/>
+      <rect class="nose" x="14" y="3" width="1" height="1"/>
+      <!-- legs, frame 1 -->
+      <g class="f1">
+        <rect class="dark" x="2" y="7" width="1" height="2"/>
+        <rect class="dark" x="3" y="7" width="1" height="1"/>
+        <rect class="dark" x="9" y="7" width="1" height="1"/>
+        <rect class="dark" x="10" y="7" width="1" height="2"/>
+      </g>
+      <!-- legs, frame 2 -->
+      <g class="f2">
+        <rect class="dark" x="2" y="7" width="1" height="1"/>
+        <rect class="dark" x="3" y="7" width="1" height="2"/>
+        <rect class="dark" x="9" y="7" width="1" height="2"/>
+        <rect class="dark" x="10" y="7" width="1" height="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

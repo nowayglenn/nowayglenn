@@ -12,5 +12,3 @@ I have 2 years of experience as a web developer, 1 year of experience as an Andr
 </p>
 
 <img src="./cat.svg" alt="Pixel cat chasing a mouse in the jungle" width="100%" />
-<img src="./jungle.svg" width="100%" />
-<img src="./mouse.svg" width="100" />

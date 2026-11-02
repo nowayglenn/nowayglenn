@@ -1,4 +1,4 @@
-Hi 👋 My name is Glenndhel Jay Dano
+Hi I'm Glenndhel
 ===================================
 
 Mobile Developer | Web Developer | Graphic Designer
